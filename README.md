@@ -52,12 +52,12 @@ amacıyla geliştirilmiştir.
 ✅ LocalStorage ile veri kalıcılığı
 
 🧠 Teknik Mimari
-🔹 Context API Kullanımı
+Context API Kullanımı
 
 Post verileri global olarak yönetilmektedir.
 PostProvider ile uygulama sarmalanarak tüm bileşenlerde tekrar kullanılabilir hale getirilmiştir.
 
-🔹 CRUD Yapısı
+CRUD Yapısı
 
 addPost
 
@@ -69,7 +69,7 @@ getPostById
 
 fonksiyonları context üzerinden yönetilmektedir.
 
-🔹 LocalStorage Senkronizasyonu
+LocalStorage Senkronizasyonu
 
 Sayfa ilk açıldığında useEffect ile localStorage'dan veri çekilir.
 
