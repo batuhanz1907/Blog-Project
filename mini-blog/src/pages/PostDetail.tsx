@@ -92,54 +92,57 @@ function PostDetails() { // post detaylarını gösterecek fonsk ekliyoruz
         </div>
       </div>
 
-      {/* Silme onay modalı - animasyonlu ve profesyonel */}
-      {showDeleteModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          {/* Arkaplan overlay */}
-          <div 
-            className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm transition-opacity animate-fadeIn"
-            onClick={handleCancelDelete}
-          ></div>
-          
-          {/* Modal kartı */}
-          <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 transform transition-all animate-slideUp">
-            {/* Uyarı ikonu */}
-            <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-red-100 mb-4">
-              <svg className="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-              </svg>
-            </div>
-            
-            {/* Başlık */}
-            <h3 className="text-lg font-bold text-gray-900 text-center mb-2">
-              Postu Sil
-            </h3>
-            
-            {/* Açıklama */}
-            <p className="text-sm text-gray-500 text-center mb-6">
-              <span className="font-semibold text-gray-700">"{post.title}"</span> başlıklı postu silmek istediğinize emin misiniz?
-              <br />Bu işlem geri alınamaz.
-            </p>
-            
-            {/* Butonlar */}
-            <div className="flex gap-3 justify-end">
-              <button
-                onClick={handleCancelDelete}
-                className="flex-1 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition font-medium text-sm"
-              >
-                İptal
-              </button>
-              <button
-                onClick={handleConfirmDelete}
-                className="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition font-medium text-sm shadow-lg hover:shadow-xl"
-              >
-                Evet, Sil
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
+     // Silme onay modalı -ffixed
+{showDeleteModal && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    {/* Arkaplan overlay */}
+    <div 
+      className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm transition-opacity animate-fadeIn"
+      onClick={handleCancelDelete}
+    ></div>
+    
+    {/* Modal kartı */}
+    <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 transform transition-all animate-slideUp">
+      {/* Uyarı ikonu */}
+      <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-red-100 mb-4">
+        <svg className="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+      </div>
+      
+      {/* Başlık */}
+      <h3 className="text-lg font-bold text-gray-900 text-center mb-2">
+        Postu Sil
+      </h3>
+      
+      {/* Açıklama */}
+      <p className="text-sm text-gray-500 text-center mb-6 break-words">
+        <span className="font-semibold text-gray-700">
+          "{post.title.length > 15 
+            ? post.title.substring(0, 15) + '...' 
+            : post.title}"
+        </span> başlıklı postu silmek istediğinize emin misiniz?
+        <br />Bu işlem geri alınamaz.
+      </p>
+      
+      {/* Butonlar */}
+      <div className="flex gap-3 justify-end">
+        <button
+          onClick={handleCancelDelete}
+          className="flex-1 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition font-medium text-sm"
+        >
+          İptal
+        </button>
+        <button
+          onClick={handleConfirmDelete}
+          className="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition font-medium text-sm shadow-lg hover:shadow-xl"
+        >
+          Evet, Sil
+        </button>
+      </div>
+    </div>
+  </div>
+)}
       {/* Tailwind animasyon sınıfları */}
       <style>{`
         @keyframes fadeIn {
