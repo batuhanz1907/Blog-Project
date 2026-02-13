@@ -1,11 +1,11 @@
-📝 Blog App (React + TypeScript)
+# 📝 Blog App (React + TypeScript)
 
 Modern ve component tabanlı bir blog uygulaması.
 CRUD işlemleri, Context API ile global state yönetimi ve TypeScript ile tip güvenliği sağlanmıştır.
 
-🚀 Proje Amacı
+# 🚀 Proje Amacı
 
-Bu proje;
+## Bu proje;
 
 React mimarisini daha iyi kavramak
 
@@ -19,7 +19,7 @@ CRUD (Create, Read, Update, Delete) mantığını uygulamak
 
 amacıyla geliştirilmiştir.
 
-🛠️ Kullanılan Teknolojiler
+## 🛠️ Kullanılan Teknolojiler
 
 ⚛️ React
 
@@ -33,7 +33,7 @@ amacıyla geliştirilmiştir.
 
 🎨 Tailwind CSS
 
-✨ Özellikler
+## ✨ Özellikler
 
 ✅ Post ekleme
 
@@ -51,7 +51,7 @@ amacıyla geliştirilmiştir.
 
 ✅ LocalStorage ile veri kalıcılığı
 
-🧠 Teknik Mimari
+## 🧠 Teknik Mimari
 Context API Kullanımı
 
 Post verileri global olarak yönetilmektedir.
@@ -69,7 +69,7 @@ getPostById
 
 fonksiyonları context üzerinden yönetilmektedir.
 
-LocalStorage Senkronizasyonu
+## LocalStorage Senkronizasyonu
 
 Sayfa ilk açıldığında useEffect ile localStorage'dan veri çekilir.
 
